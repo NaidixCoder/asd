@@ -24,7 +24,7 @@ let ciudad;
 const buscadorMenu = getElement("bx-menu");
 
 buscadorMenu.addEventListener("click", () => {
-    
+
 })
 
 
@@ -43,7 +43,7 @@ buscadorInicio.addEventListener("click", () => {
             inputInicio.classList.remove("ph-red");
         }, 400);
     } else {
-        // conexion();
+        conexion();
         console.log(conexion)
         changeDisplay();
     }
