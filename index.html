@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./styles/styles.css">
+
+    <title>App clima</title>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">InfoClima<span class="byNx">By Naidix</span></div>
+        <nav class="nav">
+            <input type="text" id="nav-search" placeholder="Ingrese localidad">
+            <button class="btn" id="nav-btn">Buscar</button>
+        </nav>
+        <i class='bx bx-search-alt-2' id="bx-menu"></i>
+
+    </header>
+
+    <div class="modalInicio">
+        <div class="welcome">
+            <img src="./img/nube.svg" alt="nube" class="nube">
+            <h1 class="title">Welcome to InfoClima</h1>
+            <span class="txt">By Naidix</span>
+            <div class="welcome-search">
+                <div class="welcome-search-input">
+                    <input type="text" placeholder="Ingrese localidad" id="welcome-search" class="">
+                    <button class="btn btn-welcome" id="welcome-btn">Buscar</button>
+                </div>
+                <div class="sugerencias">
+                    <ul id="sugerencias-lista"></ul>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <main class="main"> 
+        
+        <div class="main-content">
+            
+            <div class="main-localidad">
+                <div class="main-localidad-info">
+                    <h1 class="title" id="title">titulo</h1>
+                    <img class="main-img" src="" alt="img clima" id="main-img">
+                    <p class="txt description" id="description">descripcion</p>
+                </div>
+            </div>
+
+            <div class="card card1">
+                <div class="card-img">
+                    <img src="./img/temp.svg" class="img-icon"></img>
+                </div>
+                <div class="main-temperatura"><h2 class="subtitle">Temperatura</h2>
+                </div>
+                <span class="card-inf" id="temperatura">30°</span>
+            </div>
+
+            <div class="card">
+                <div class="card-img">
+                    <img src="./img/humidity.svg" class="img-icon"></img>
+                </div>
+                <div class="main-humedad"><h2 class="subtitle">Humedad</h2></div>
+                <span id="humedad" class="card-inf">20%</span>
+
+            </div>
+            <div class="card">                
+                <div class="card-img">
+                    <img src="./img/wind.svg" class="img-icon"></img>
+                </div>
+                <div class="main-wind"><h2 class="subtitle">Viento</h2></div>
+                <span class="card-inf" id="wind">5km</span>
+            </div>
+        </div>
+
+        
+    </main>
+
+    
+    <script src="./main.js"></script>
+</body>
+</html>
