@@ -169,6 +169,7 @@
     letter-spacing: 2px;
 }
 
+
 .ph-red::placeholder{
     color: #ff0 !important;
 }
