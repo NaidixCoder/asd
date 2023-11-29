@@ -1,0 +1,96 @@
+.modalInicio{
+    display: grid;
+    place-items: center;
+    padding-bottom: 4rem;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    z-index: 100;
+    background-color: $color-secundario;
+    opacity: 1; 
+    transition: opacity 1.7s ease-in-out; 
+    overflow: hidden;
+
+    .welcome{
+        @extend %displayflex;
+        flex-direction: column;
+        align-items: center;
+        opacity: 1;
+        transition: .4s;
+        gap: 1rem;
+    }
+
+    .title{
+        font-size: 2.5rem;
+
+        @include md {
+            font-size: 3.5rem;
+        }
+    }
+
+    .txt{
+        font-family: $secondary-font;
+        color: #01c2c2;
+        letter-spacing: .2rem;
+    }
+    
+    .welcome-search-input{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 2rem;
+
+        .btn {
+            display: none;
+    
+            @include md {
+                height: 49px;
+                display: block;
+            }
+        }
+    }
+    
+    #sugerencias-lista{
+        color: $font-color;
+        font-size: 1.1rem;
+        position: absolute;
+        max-height: 200px;
+        overflow: auto;
+        list-style: none;
+        margin-top: .4rem;
+        margin-left: 1.5rem;
+        max-height: 150px;
+        max-width: 265px;
+        min-width: 265px;
+        font-size: 1rem;
+
+        &::-webkit-scrollbar {
+            width: 10px; 
+        }
+
+        &::-webkit-scrollbar-thumb{
+            background-color: #01c2c2;
+            border-radius: 5px;
+        }
+        &::-webkit-scrollbar-track{
+            border-radius: 5px;
+            background-color: rgba(1, 194, 194, 0.336); 
+
+        }
+
+        .li-sugerencias{
+            padding: .2rem .3rem;
+            border-radius: 5px;
+        }
+
+        li {
+            &:hover{
+                background-color: #01c2c2;
+                cursor: pointer;
+                color: $color-secundario;
+            }
+        }
+        
+    }
+}

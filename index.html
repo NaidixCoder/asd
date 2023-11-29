@@ -9,10 +9,10 @@
     <title>App clima</title>
 </head>
 <body>
-    <header class="header">
-        <div class="logo">InfoClima<span class="byNx">By Naidix</span></div>
+    <header class="d-none">
+        <div class="logo">InfoClima<span class="byNx">By Matias Infante</span></div>
         <nav class="nav">
-            <input type="text" id="nav-search" placeholder="Ingrese localidad">
+            <input type="text" id="nav-search" placeholder="Ingrese localidad" class="input">
             <button class="btn" id="nav-btn">Buscar</button>
         </nav>
         <i class='bx bx-search-alt-2' id="bx-menu"></i>
@@ -20,13 +20,13 @@
     </header>
 
     <div class="modalInicio">
-        <div class="welcome">
+        <div class="welcome d-flex">
             <img src="./img/nube.svg" alt="nube" class="nube">
             <h1 class="title">Welcome to InfoClima</h1>
-            <span class="txt">By Naidix</span>
+            <span class="txt">By Matias Infante</span>
             <div class="welcome-search">
                 <div class="welcome-search-input">
-                    <input type="text" placeholder="Ingrese localidad" id="welcome-search" class="">
+                    <input type="text" placeholder="Ingrese localidad" id="welcome-search" class="input">
                     <button class="btn btn-welcome" id="welcome-btn">Buscar</button>
                 </div>
                 <div class="sugerencias">
@@ -38,9 +38,9 @@
 
     </div>
 
-    <main class="main"> 
+    <main class="main d-none"> 
         
-        <div class="main-content">
+        <div class="main-content d-none">
             
             <div class="main-localidad">
                 <div class="main-localidad-info">
@@ -59,7 +59,7 @@
                 <span class="card-inf" id="temperatura">30°</span>
             </div>
 
-            <div class="card">
+            <div class="card card2">
                 <div class="card-img">
                     <img src="./img/humidity.svg" class="img-icon"></img>
                 </div>
@@ -67,7 +67,7 @@
                 <span id="humedad" class="card-inf">20%</span>
 
             </div>
-            <div class="card">                
+            <div class="card card3">                
                 <div class="card-img">
                     <img src="./img/wind.svg" class="img-icon"></img>
                 </div>

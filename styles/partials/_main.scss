@@ -1,0 +1,156 @@
+.main{
+    background-color: $color-primario;
+    height: auto;
+    color: var(--font-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+
+    @include md {
+        min-height: calc(100vh - 90px);
+    }
+
+    .main-content{
+        color: $font-color;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(1fr, 4);
+        opacity: 0;
+        transition: 4s;
+        gap: 2rem;
+    
+        @include md {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: repeat(2, 1fr);
+        }
+        @include lg {
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+        }
+    
+        .main-localidad{
+            @extend %displayflex;
+            flex-direction: column;
+            padding: 1rem;
+            background-color: $color-secundario;
+            grid-column: 1/2;
+            grid-row: 1/2;
+            min-width: 260px;
+
+            @include md {
+                max-width: none;
+            }
+    
+            @include lg {
+                grid-column: 1/4;
+                grid-row: 1/2;
+            }
+    
+            .main-localidad-info{
+                padding: 2rem 5rem;
+                border-radius: .3rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+        
+        .card{
+            background-color: $color-secundario;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-width: 250px;
+        
+            height: 250px;
+            font-size: 1.3rem;
+        }
+        
+        .card1{
+            grid-column: 1/2;
+            grid-row: 2/3;
+    
+            @include md {
+                grid-column: 2/3;
+                grid-row: 1/2;
+            }
+            
+            @include lg {
+                grid-column: 1/2;
+                grid-row: 2/3;
+            }
+        }
+        
+        .card2{
+            grid-column: 1/2;
+            grid-row: 3/4;
+    
+            @include md {
+                grid-column: 1/2;
+                grid-row: 2/3;
+            }
+    
+            @include lg {
+                grid-column: 2/3;
+                grid-row: 2/3;
+            }
+        }
+        
+        .card3{
+            grid-column: 1/2;
+            grid-row: 4/5;
+    
+            @include md {
+                grid-column: 2/3;
+                grid-row: 2/3;
+            }
+    
+            @include lg {
+                grid-column: 3/4;
+                grid-row: 2/3;
+            }
+        }
+        
+        .card-inf{
+            font-size: 2rem;
+            color: $font-color;
+        }
+        
+        
+        .main-temperatura,
+        .main-humedad,
+        .main-wind {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+        
+    }
+}
+
+
+
+
+
+
+.img-icon{
+    max-height: 90px;
+}
+
+
+.txt{
+    color: var(--font-color);
+    font-size: 1.3rem;
+}
+
+.btn-welcome{
+    padding: .8rem;
+}
+
+.nube{
+    scale: .7;
+}
